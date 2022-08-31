@@ -20,7 +20,8 @@ function CategoryCard({ cat, currentUser }) {
         num4: num4,
         num5: num5,
         category_id: cat.id,
-        user_id: 1 // need to update to currentUser.id
+        user_id: 1, // need to update to currentUser.id
+        likes: 0
       })
     })
     .then(res => res.json())

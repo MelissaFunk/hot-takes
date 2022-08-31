@@ -12,6 +12,12 @@ class ListsController < ApplicationController
     render json: List.create(list_params), status: :created
   end
 
+  def update 
+    list =  List.find_by(id: params[:id])
+    list.update(list_params)
+    render json: list, status: :accepted
+  end
+
   private
 
   def list_params
