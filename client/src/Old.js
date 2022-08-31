@@ -18,7 +18,7 @@ function Old({ currentUser, setCurrentUser }) {
   
   return(
     <div>
-      <h2>New Categories</h2>
+      <h2>Old Categories</h2>
       {currentUser.username ? 
       <p>Submit your Top 5 in the categories below!</p>
       :

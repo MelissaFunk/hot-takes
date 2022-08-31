@@ -20,6 +20,11 @@ class UsersController < ApplicationController
     end
   end
 
+  def my_lists
+    my_lists = List.where(["user_id = ?", params[:id]])
+    render json: my_lists, status: :ok
+  end
+
   private
   
   def user_params

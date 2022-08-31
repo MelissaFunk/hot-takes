@@ -26,11 +26,11 @@ function App() {
       <NavBar currentUser={currentUser} setCurrentUser={setCurrentUser}/>
       <Switch>
         <Route exact path="/"><Home currentUser={currentUser} setCurrentUser={setCurrentUser}/></Route>
-        <Route exact path="/old"><Old currentUser={currentUser}/></Route>
-        <Route exact path="/login"><Login currentUser={currentUser}/></Route>
+        <Route exact path="/old"><Old currentUser={currentUser} setCurrentUser={setCurrentUser}/></Route>
+        <Route exact path="/login"><Login setCurrentUser={setCurrentUser}/></Route>
         <Route exact path="/categories/:id"><CategoryDetails /></Route>
         <Route exact path="/lists/:id"><ListDetails /></Route>
-        <Route exact path="/my-lists"><MyLists /></Route>
+        <Route exact path="/my-lists"><MyLists currentUser={currentUser}/></Route>
       </Switch>
     </div>
   );
