@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :lists, only: [:create]
+  resources :comments, only: [:create]
+  resources :lists, only: [:index, :show, :create]
   resources :categories, only: [:index, :show]
   resources :users, only: [:index, :create]
 
