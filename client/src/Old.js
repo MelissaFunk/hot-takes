@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import CategoryCard from './CategoryCard'
 import Login from './Login'
 
-function Home({ currentUser, setCurrentUser }) {
+function Old({ currentUser, setCurrentUser }) {
   const [categories, setCategories] = useState([])
   const [loginButtonPopup, setLoginButtonPopup] = useState(false)
 
@@ -34,4 +34,4 @@ function Home({ currentUser, setCurrentUser }) {
   )
 }
 
-export default Home
+export default Old

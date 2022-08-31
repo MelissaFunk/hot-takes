@@ -20,7 +20,7 @@ function CategoryCard({ cat, currentUser }) {
         num4: num4,
         num5: num5,
         category_id: cat.id,
-        user_id: 1, // need to update to currentUser.id
+        user_id: currentUser.id,
         likes: 0
       })
     })
@@ -31,8 +31,8 @@ function CategoryCard({ cat, currentUser }) {
 
   return(
     <div>
-      <h2>{cat.category}</h2>
-      <form onSubmit={handleListSubmit}>
+      <h3>{cat.category}</h3>
+      {currentUser.username ? <form onSubmit={handleListSubmit}>
         <label>1. </label>
         <input type="text" value={num1} onChange={(e) => setNum1(e.target.value)}/>
         <label>2. </label>
@@ -44,8 +44,8 @@ function CategoryCard({ cat, currentUser }) {
         <label>5. </label>
         <input type="text" value={num5} onChange={(e) => setNum5(e.target.value)}/>
         <button type="submit">Submit</button>
-      </form>
-      <Link to={`/categories/${cat.id}`}><button>See Lists</button></Link>
+      </form> : null}
+      <Link to={`/categories/${cat.id}`}><button>See Top Lists</button></Link>
     </div>
   )
 }

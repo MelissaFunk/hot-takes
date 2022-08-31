@@ -2,14 +2,13 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router'
 
 function ListDetails({ list, handleUpdateList }) {
-  const [user, setUser] = useState([])
   const { id } = useParams()
 
 
   useEffect(() => {
     fetch(`/lists/${id}`)
     .then(res => res.json())
-    .then(list => setUser(list.user))
+    .then(list => console.log(list)) 
   }, [id])
 
 
@@ -31,7 +30,7 @@ function ListDetails({ list, handleUpdateList }) {
       <p key={list.num3}>3. {list.num3}</p>
       <p key={list.num4}>4. {list.num4}</p>
       <p key={list.num5}>5. {list.num5}</p>
-      <p key={user.id}>By: <b>{user.username}</b></p>
+      <p key={list.id}>By: <b>{list.username}</b></p>
       <p key={list.likes}>Likes: {list.likes}</p>
       <button onClick={handleLikeClick}>Like ❤️</button>
     </div>

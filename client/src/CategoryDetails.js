@@ -21,12 +21,14 @@ function CategoryDetails() {
     setLists(lists.map(list => list.id === listToUpdate.id ? listToUpdate : list))
   }
 
+  const Lists = lists.map(list =>
+    <ListDetails key={list.id} list={list} handleUpdateList={handleUpdateList}/>
+    )
+
   return(
     <div>
       <h2>{category.category}</h2>
-      {lists.map(list => {
-        return <ListDetails key={list.id} list={list} handleUpdateList={handleUpdateList}/>
-      })}
+      {Lists}
       <Link to="/"><button>Back to Categories</button></Link>
     </div>
   )
