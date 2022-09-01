@@ -17,12 +17,12 @@ function NavBar({ currentUser, setCurrentUser }) {
 }  
 
   return(
-    <div>
-      <h1>Hot Takes! Welcome {currentUser.username}</h1>
-      <Link to="/">New</Link>
-      <Link to="/old">Old</Link>
-      {currentUser.username ? <Link to="/my-lists">My Lists</Link> : null}
-      {currentUser.username ? <button onClick={() => handleLogout()}>Logout</button> : null }
+    <div className="navbar">
+      <h1 className="navbar-title">HOT✰TAKES</h1>
+      <Link to="/" className="navbar-link">NEW</Link>
+      <Link to="/old" className="navbar-link">OLD</Link>
+      {currentUser.username ? <Link to="/my-lists" className="navbar-link">MY LISTS</Link> : null}
+      {currentUser.username ? <button onClick={() => handleLogout()} className="navbar-btn">LOGOUT</button> : null }
     </div>
   )
 }
