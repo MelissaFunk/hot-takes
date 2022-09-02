@@ -12,7 +12,7 @@ function Old({ currentUser, setCurrentUser }) {
     .then(data => setCategories(data))
   }, [])
 
-  const CategoryCards = categories.slice(-3).map(cat =>
+  const CategoryCards = categories.slice(0,-3).map(cat =>
     <CategoryCard key={cat.id} cat={cat} currentUser={currentUser}/>
     )
   
