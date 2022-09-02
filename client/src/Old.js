@@ -12,10 +12,11 @@ function Old({ currentUser, setCurrentUser }) {
     .then(data => setCategories(data))
   }, [])
 
-  // add .slice(0, -3) later after categories (before map)
-  const CategoryCards = categories.map(cat =>
+  const CategoryCards = categories.slice(0, -3).map(cat =>
     <CategoryCard key={cat.id} cat={cat} currentUser={currentUser}/>
     )
+
+  console.log(categories)
   
   return(
     <div>
