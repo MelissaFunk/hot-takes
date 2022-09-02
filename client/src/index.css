@@ -64,7 +64,47 @@ body {
 
 .navbar-btn:hover {
   color: #ee6c4d;
-  background: #e0fbfc
+  background: #e0fbfc;
+  cursor: pointer
+}
+
+/* HOME/OLD */
+.page-title, .page-desc {
+  text-align: center
+}
+
+.login-div {
+  text-align: center;
+  margin-right: 100px
+}
+
+.login-sign-btn, .login-desc {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 10px 0;
+}
+
+.login-sign-btn {
+  margin-right: 6px;
+  margin-left: 100px;
+  background: #ee6c4d;
+  color:#e0fbfc;
+  height: 30px;
+  width: 150px;
+  font-size: medium;
+  border-radius: 4px;
+  border: none
+}
+
+.login-sign-btn:hover {
+  background:#e0fbfc;
+  color: #ee6c4d;
+  cursor: pointer
+}
+
+.cat-container {
+  text-align: center;
+  margin-bottom: 30px
 }
 
 /* LOGIN/SIGNUP POPUP */
@@ -86,8 +126,8 @@ body {
   padding: 32px;
   width: 100%;
   max-width: 500px;
-  background-color: white;
-  border-radius: 7px
+  background-color: #ee6c4d;
+  border-radius: 7px;
 }
 
 .popup-inner .close-btn {
@@ -95,5 +135,208 @@ body {
   top: 16px;
   right: 16px;
   border-radius: 5px;
+  cursor: pointer;
+  background-color: #e0fbfc;
+  border: none
+}
+
+.popup-inner .close-btn:hover {
+  background-color: black;
+  color: #e0fbfc
+}
+
+.login-input {
+  margin-right: 10px;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  height: 30px;
+  width: 170px;
+  border-radius: 7px;
+  border: none;
+  padding-left: 5px
+}
+
+.signup-input-left {
+  height: 30px;
+  width: 170px;
+  border-radius: 7px;
+  border: none;
+  margin-left: 20px;
+  margin-right: 10px;
+  padding-left: 5px
+}
+
+.signup-input-right {
+  height: 30px;
+  width: 170px;
+  border-radius: 7px;
+  border: none;
+  margin-right: 10px;
+  padding-left: 5px
+}
+
+.login-btn {
+  height: 35px;
+  width: 60px;
+  border-radius: 7px;
+  border: none;
+  background-color: #98c1d9;
+}
+
+.login-btn:hover {
+  background-color: greenyellow;
   cursor: pointer
+}
+
+.signup-btn {
+  height: 35px;
+  width: 80px;
+  border-radius: 7px;
+  border: none;
+  background-color: #98c1d9;
+}
+
+.signup-btn:hover {
+  background-color: greenyellow;
+  cursor: pointer
+}
+
+/* CATEGORY CARDS */
+
+.cat-card {
+  width: 300px;
+  display: inline-grid;
+  display: inline-block;
+  margin: 1rem 2rem;
+}
+
+.cat-card h3 {
+  margin-bottom: 10px;
+  color:#ee6c4d
+}
+
+.cat-card-label1 {
+  margin-right: 5px
+}
+
+.cat-card-label {
+  font-size: large;
+  margin-top: 5px;
+  margin-right: 2px
+}
+
+.cat-card div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center
+}
+
+.cat-card input {
+  width: 100%;
+  padding: 12px 10px;
+  margin: 8px 0 0 5px;
+  display: block;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.catcard-submit-btn {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: medium;
+  height: 30px;
+  width: 150px;
+  background-color: #ee6c4d;
+  color:#e0fbfc
+}
+
+.catcard-submit-btn:hover {
+  background-color:#e0fbfc;
+  color:#ee6c4d;
+  cursor: pointer
+}
+
+.catcard-btn {
+  background: #3d5a80;
+  color:#e0fbfc;
+  height: 30px;
+  width: 150px;
+  font-size: medium;
+  border-radius: 4px;
+  border: none
+}
+
+.catcard-btn:hover {
+  background-color: #e0fbfc;
+  color: #3d5a80;
+  cursor: pointer
+}
+
+/* CATEGORY DETAILS & LIST DETAILS */
+
+.back-btn-div {
+  text-align: center
+}
+
+.back-btn {
+  background: #3d5a80;
+  color:#e0fbfc;
+  height: 35px;
+  width: 170px;
+  font-size: medium;
+  border-radius: 4px;
+  border: none
+}
+
+.back-btn:hover {
+  background-color: #e0fbfc;
+  color: #3d5a80;
+  cursor: pointer
+}
+
+.cat-title {
+  color:#ee6c4d;
+  text-align: center
+}
+
+.list-container {
+  margin: 0rem 10rem 0rem 10rem;
+  margin-bottom: 30px
+}
+
+.list-card {
+  width: 300px;
+  display: inline-grid;
+  display: inline-block;
+}
+
+.likes, .by-user {
+  color:#ee6c4d
+}
+
+.like-btn {
+  background-color:#e0fbfc;
+  color:black;
+  padding-bottom: 3px;
+  border-radius: 2px;
+  border: none
+}
+
+.like-btn:hover {
+  background-color:#ee6c4d;
+  cursor: pointer
+}
+
+/* MYLISTS */
+
+.mylist-title {
+  text-align: center
+}
+
+.mylist-cat-title {
+  color:#ee6c4d
 }

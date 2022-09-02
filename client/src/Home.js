@@ -12,24 +12,23 @@ function Home({ currentUser, setCurrentUser }) {
     .then(data => setCategories(data))
   }, [])
 
-  const CategoryCards = categories.slice(-5).map(cat =>
+  const CategoryCards = categories.slice(-3).map(cat =>
     <CategoryCard key={cat.id} cat={cat} currentUser={currentUser}/>
     )
-  
+   
   return(
     <div>
-      <h2>New Categories</h2>
+      <h2 className="page-title">New Categories</h2>
       {currentUser.username ? 
-      <p>Submit your Top 5 in the categories below!</p>
+      <p className="page-desc">Submit your Top 5 in the categories below!</p>
       :
-      <div>
-        <button onClick={() => setLoginButtonPopup(true)}>Login or Sign Up</button>
+      <div className="login-div">
+        <button onClick={() => setLoginButtonPopup(true)} className="login-sign-btn">Login or Sign Up</button>
         <Login trigger={loginButtonPopup} setTrigger={setLoginButtonPopup} setCurrentUser={setCurrentUser}></Login>
-        <p>to add your Top 5 in the categories below!</p>
+        <p className="login-desc">to add your Top 5 in the categories below!</p>
       </div>
       }
-
-      {CategoryCards}
+      <div className="cat-container">{CategoryCards}</div>
     </div>
   )
 }

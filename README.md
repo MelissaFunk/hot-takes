@@ -1,24 +1,6 @@
 # README
+HOT✰TAKES
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome! This app allows users to list their top 5 for any given category (such as Fast Food Chains, Christmas Movies, etc). Users can also view other users' top 5 lists & like them.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+A React and Ruby on Rails app.

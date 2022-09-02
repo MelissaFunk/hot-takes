@@ -7,6 +7,7 @@ function CategoryCard({ cat, currentUser }) {
   const [num3, setNum3] = useState("")
   const [num4, setNum4] = useState("")
   const [num5, setNum5] = useState("")
+  const [submitted, setSubmitted] = useState(false)
 
   const handleListSubmit = (e) => {
     e.preventDefault()
@@ -25,27 +26,43 @@ function CategoryCard({ cat, currentUser }) {
       })
     })
     .then(res => res.json())
-    .then(res => console.log(res))
+    .then(setSubmitted(true))
     e.target.reset()
   }
-
+ 
   return(
-    <div>
+    <div className="cat-card">
       <h3>{cat.category}</h3>
-      {currentUser.username ? <form onSubmit={handleListSubmit}>
-        <label>1. </label>
-        <input type="text" value={num1} onChange={(e) => setNum1(e.target.value)}/>
-        <label>2. </label>
-        <input type="text" value={num2} onChange={(e) => setNum2(e.target.value)}/>
-        <label>3. </label>
-        <input type="text" value={num3} onChange={(e) => setNum3(e.target.value)}/>
-        <label>4. </label>
-        <input type="text" value={num4} onChange={(e) => setNum4(e.target.value)}/>
-        <label>5. </label>
-        <input type="text" value={num5} onChange={(e) => setNum5(e.target.value)}/>
-        <button type="submit">Submit</button>
-      </form> : null}
-      <Link to={`/categories/${cat.id}`}><button>See Top Lists</button></Link>
+      {currentUser.username && submitted === false ? 
+        <form onSubmit={handleListSubmit}>
+          <div>
+            <label className="cat-card-label1">1</label>
+            <input type="text" value={num1} onChange={(e) => setNum1(e.target.value)}/>
+          </div>
+          <div>
+            <label className="cat-card-label">2</label>
+            <input type="text" value={num2} onChange={(e) => setNum2(e.target.value)}/>
+          </div>
+          <div>
+            <label className="cat-card-label">3</label>
+            <input type="text" value={num3} onChange={(e) => setNum3(e.target.value)}/>
+          </div>
+          <div>
+            <label className="cat-card-label">4</label>
+            <input type="text" value={num4} onChange={(e) => setNum4(e.target.value)}/>
+          </div>
+          <div>
+            <label className="cat-card-label">5</label>
+            <input type="text" value={num5} onChange={(e) => setNum5(e.target.value)}/>
+          </div>
+          <button type="submit" className="catcard-submit-btn">Submit</button>
+        </form> 
+      : null}
+      {submitted === true ?
+        <p>Submitted!</p>
+        : null
+      }
+      <Link to={`/categories/${cat.id}`}><button className="catcard-btn">See Submissions</button></Link>
     </div>
   )
 }

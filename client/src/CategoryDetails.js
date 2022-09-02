@@ -27,9 +27,11 @@ function CategoryDetails() {
 
   return(
     <div>
-      <Link to="/"><button>Back to Categories</button></Link>
-      <h2>{category.category}</h2>
-      {Lists}
+      <div className="back-btn-div">
+        <Link to="/"><button className="back-btn">Back to Categories</button></Link>
+      </div>
+      <h2 className="cat-title">{category.category}</h2>
+      <div className="list-container">{Lists}</div>
     </div>
   )
 }

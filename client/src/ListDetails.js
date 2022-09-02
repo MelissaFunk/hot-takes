@@ -24,15 +24,15 @@ function ListDetails({ list, handleUpdateList }) {
 
 
   return(
-    <div>
+    <div className="list-card">
       <p key={list.num1}>1. {list.num1}</p> 
       <p key={list.num2}>2. {list.num2}</p>
       <p key={list.num3}>3. {list.num3}</p>
       <p key={list.num4}>4. {list.num4}</p>
       <p key={list.num5}>5. {list.num5}</p>
-      <p key={list.id}>By: <b>{list.username}</b></p>
-      <p key={list.likes}>Likes: {list.likes}</p>
-      <button onClick={handleLikeClick}>Like ❤️</button>
+      <p key={list.id} className="by-user">By: {list.username}</p>
+      <p key={list.likes} className="likes">Likes: {list.likes}</p>
+      <button onClick={handleLikeClick} className="like-btn">Like ❤️</button>
     </div>
   )
 }

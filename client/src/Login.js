@@ -58,15 +58,15 @@ function Login({ trigger, setTrigger, setCurrentUser }) {
       <div className="popup-inner">
         <button className="close-btn" onClick={() => setTrigger(false)}>X</button>
         <form onSubmit={onLoginSubmit}>
-          <input placeholder=" Username" type="text" value={userLog} onChange={e => setUserLog(e.target.value)}></input>
-          <input placeholder=" Password"type="password" value={passLog} onChange={e => setPassLog(e.target.value)}></input>
-          <button type="submit">Login</button>
+          <input placeholder="Username" type="text" value={userLog} onChange={e => setUserLog(e.target.value)} className="login-input"></input>
+          <input placeholder="Password"type="password" value={passLog} onChange={e => setPassLog(e.target.value)} className="login-input"></input>
+          <button type="submit" className="login-btn">Login</button>
         </form>
 
         <form onSubmit={onSignupSubmit}>
-          <input placeholder=" Username" type="text" value={userSign} onChange={e => setUserSign(e.target.value)}></input>
-          <input placeholder=" Password"type="password" value={passSign} onChange={e => setPassSign(e.target.value)}></input>
-          <button type="submit">Sign Up</button>
+          <input placeholder="Username" type="text" value={userSign} onChange={e => setUserSign(e.target.value)} className="signup-input-left"></input> 
+          <input placeholder="Password"type="password" value={passSign} onChange={e => setPassSign(e.target.value)} className="signup-input-right"></input>
+          <button type="submit" className="signup-btn">Sign Up</button>
         </form>
         
         <div>{errors ? errors.map(error => (
