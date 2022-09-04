@@ -12,7 +12,7 @@ function Home({ currentUser, setCurrentUser }) {
     .then(data => setCategories(data))
   }, [])
 
-  const CategoryCards = categories.slice(-3).reverse.map(cat =>
+  const CategoryCards = categories.slice(-3).reverse().map(cat =>
     <CategoryCard key={cat.id} cat={cat} currentUser={currentUser}/>
     )
    
