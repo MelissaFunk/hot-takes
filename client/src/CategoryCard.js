@@ -62,7 +62,7 @@ function CategoryCard({ cat, currentUser }) {
         <p>Submitted!</p>
         : null
       }
-      <Link to={`/categories/${cat.id}`}><button className="catcard-btn">See Submissions</button></Link>
+      <Link to={`/category/${cat.id}`}><button className="catcard-btn">See Submissions</button></Link>
     </div>
   )
 }

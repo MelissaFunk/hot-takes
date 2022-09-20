@@ -28,7 +28,7 @@ function App() {
         <Route exact path="/"><Home currentUser={currentUser} setCurrentUser={setCurrentUser}/></Route>
         <Route exact path="/old"><Old currentUser={currentUser} setCurrentUser={setCurrentUser}/></Route>
         <Route exact path="/login"><Login setCurrentUser={setCurrentUser}/></Route>
-        <Route exact path="/categories/:id"><CategoryDetails /></Route>
+        <Route exact path="/category/:id"><CategoryDetails /></Route>
         <Route exact path="/lists/:id"><ListDetails /></Route>
         <Route exact path="/my-lists"><MyLists currentUser={currentUser}/></Route>
       </Switch>
