@@ -9,6 +9,7 @@ System dependencies:
 
 Ruby version: 2.7.4
 Rails version: 6.1.4
+
 To start:
 
 Run bundle install to install dependencies on the back-end server
